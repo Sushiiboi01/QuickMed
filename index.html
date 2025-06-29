@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Med - Your Health Journey Starts Here | Find Doctors & Book Appointments</title>
+    <meta name="description" content="Quick Med - The leading healthcare booking platform in the Philippines. Find trusted doctors, check hospital availability, and book appointments instantly.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <h2>Quick Med</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#hospitals" class="nav-link">Hospitals</a>
+                <a href="#doctors" class="nav-link">Doctors</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-auth">
+                <button class="btn-login" onclick="openModal('loginModal')">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
+                </button>
+                <button class="btn-signup" onclick="openModal('signupModal')">
+                    <i class="fas fa-user-plus"></i>
+                    Sign Up
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Trusted by 50,000+ Patients</span>
+                </div>
+                <h1>Your Health Journey Starts Here</h1>
+                <p class="hero-subtitle">Connect with trusted doctors across the Philippines. Book appointments instantly, check real-time availability, and receive quality healthcare at your fingertips.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Doctors</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Hospitals</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('hospitals')">
+                        <i class="fas fa-search"></i>
+                        Find Hospital
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('services')">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-cards">
+                    <div class="hero-card primary">
+                        <div class="card-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3>Find Trusted Doctors</h3>
+                        <p>Connect with board-certified specialists across the Philippines</p>
+                        <div class="card-badge">Verified</div>
+                    </div>
+                    <div class="hero-card secondary">
+                        <div class="card-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Instant Booking</h3>
+                        <p>Reserve your appointment in seconds with real-time availability</p>
+                        <div class="card-badge">Fast</div>
+                    </div>
+                    <div class="hero-card accent">
+                        <div class="card-icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <h3>Premium Hospitals</h3>
+                        <p>Access to top-tier medical centers with world-class facilities</p>
+                        <div class="card-badge">Premium</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Why Choose Quick Med</span>
+                <h2>Healthcare Made Simple & Accessible</h2>
+                <p>Experience the future of healthcare booking with our comprehensive platform designed to put your health first.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24/7 Availability</h3>
+                    <p>Book appointments anytime, anywhere. Our platform never sleeps, ensuring you can access healthcare when you need it most.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Verified Doctors</h3>
+                    <p>All doctors are thoroughly vetted and licensed. Your health and safety are our top priorities.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile First</h3>
+                    <p>Optimized for mobile devices. Book appointments on-the-go with our responsive design.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Live Support</h3>
+                    <p>Get instant help from our dedicated support team. We're here to assist you every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Services</span>
+                <h2>How Can We Help You Today?</h2>
+                <p>Discover personalized healthcare solutions designed just for you. From finding the right doctor to managing your appointments.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Find A Doctor</h3>
+                    <p>Connect with our trusted specialists for your health needs. Browse by specialty, location, or availability to find the perfect match.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Filter by specialty</li>
+                        <li><i class="fas fa-check"></i> Location-based search</li>
+                        <li><i class="fas fa-check"></i> Read doctor reviews</li>
+                    </ul>
+                    <button class="btn-outline" onclick="scrollToSection('doctors')">
+                        <i class="fas fa-arrow-right"></i>
+                        Explore Doctors
+                    </button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hospital-user"></i>
+                    </div>
+                    <h3>Hospital Directory</h3>
+                    <p>Discover hospitals across the Philippines with real-time availability and comprehensive information about facilities and services.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 50+ hospitals listed</li>
+                        <li><i class="fas fa-check"></i> Facility information</li>
+                        <li><i class="fas fa-check"></i> Service details</li>
+                    </ul>
+                    <button class="btn-outline" onclick="scrollToSection('hospitals')">
+                        <i class="fas fa-arrow-right"></i>
+                        Browse Hospitals
+                    </button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Check Availability</h3>
+                    <p>View real-time slot availability and book appointments instantly with your preferred doctors. No more waiting on hold.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Real-time updates</li>
+                        <li><i class="fas fa-check"></i> Instant booking</li>
+                        <li><i class="fas fa-check"></i> Schedule management</li>
+                    </ul>
+                    <button class="btn-outline" onclick="scrollToSection('hospitals')">
+                        <i class="fas fa-arrow-right"></i>
+                        Check Now
+                    </button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Appointment Booking</h3>
+                    <p>Schedule your appointments with ease. Get reminders and manage your healthcare schedule all in one place.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Easy scheduling</li>
+                        <li><i class="fas fa-check"></i> Smart reminders</li>
+                        <li><i class="fas fa-check"></i> Reschedule options</li>
+                    </ul>
+                    <button class="btn-outline" onclick="openModal('signupModal')">
+                        <i class="fas fa-arrow-right"></i>
+                        Start Booking
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Featured Doctors</span>
+                <h2>Meet Our Trusted Medical Professionals</h2>
+                <p>Connect with experienced doctors who are committed to providing exceptional care and personalized treatment plans.</p>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Jose Dela Cruz</h3>
+                        <span class="doctor-specialty">Cardiology</span>
+                        <p class="doctor-experience">15+ years of experience</p>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9/5)</span>
+                        </div>
+                        <div class="doctor-availability available">
+                            <i class="fas fa-circle"></i>
+                            Available Today
+                        </div>
+                        <button class="btn-primary" onclick="viewDoctorDetails(1)">
+                            <i class="fas fa-calendar-plus"></i>
+                            Book Appointment
+                        </button>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Maria Santos</h3>
+                        <span class="doctor-specialty">Pediatrics</span>
+                        <p class="doctor-experience">12+ years of experience</p>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8/5)</span>
+                        </div>
+                        <div class="doctor-availability available">
+                            <i class="fas fa-circle"></i>
+                            Available Today
+                        </div>
+                        <button class="btn-primary" onclick="viewDoctorDetails(2)">
+                            <i class="fas fa-calendar-plus"></i>
+                            Book Appointment
+                        </button>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Ana Rodriguez</h3>
+                        <span class="doctor-specialty">Neurology</span>
+                        <p class="doctor-experience">20+ years of experience</p>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9/5)</span>
+                        </div>
+                        <div class="doctor-availability available">
+                            <i class="fas fa-circle"></i>
+                            Available Today
+                        </div>
+                        <button class="btn-primary" onclick="viewDoctorDetails(4)">
+                            <i class="fas fa-calendar-plus"></i>
+                            Book Appointment
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="doctors-cta">
+                <button class="btn-secondary" onclick="scrollToSection('hospitals')">
+                    <i class="fas fa-search"></i>
+                    View All Doctors
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospitals Section -->
+    <section id="hospitals" class="hospitals">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Hospital Network</span>
+                <h2>Available Hospitals Across the Philippines</h2>
+                <p>Find and book appointments at trusted medical centers with world-class facilities and experienced healthcare professionals.</p>
+            </div>
+            <div class="search-filters">
+                <div class="search-box">
+                    <input type="text" placeholder="Search hospitals, doctors, or locations..." id="hospitalSearch">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filters">
+                    <select id="specialtyFilter">
+                        <option value="">All Specialties</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="orthopedics">Orthopedics</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="dermatology">Dermatology</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="oncology">Oncology</option>
+                        <option value="emergency">Emergency Medicine</option>
+                    </select>
+                    <select id="locationFilter">
+                        <option value="">All Locations</option>
+                        <option value="manila">Manila</option>
+                        <option value="makati">Makati</option>
+                        <option value="quezon">Quezon City</option>
+                        <option value="cebu">Cebu</option>
+                        <option value="davao">Davao</option>
+                    </select>
+                </div>
+            </div>
+            <div class="hospitals-grid" id="hospitalsGrid">
+                <!-- Hospital cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Patient Stories</span>
+                <h2>What Our Patients Say</h2>
+                <p>Real experiences from patients across the Philippines who have transformed their healthcare journey with Quick Med.</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Quick Med made booking my appointment so easy. I found a cardiologist in Makati within minutes and got an appointment the same week. The platform is user-friendly and reliable. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Maria Santos</h4>
+                            <span>Manila Resident</span>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"As a busy professional, I appreciate how Quick Med saves me time. I can check doctor availability and book appointments without calling multiple hospitals. The real-time updates are fantastic!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>John Dela Cruz</h4>
+                            <span>Quezon City</span>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"The real-time slot availability feature is amazing. I was able to find an available pediatrician for my child's emergency check-up. Quick Med truly lives up to its name and saved us a lot of stress."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Ana Rodriguez</h4>
+                            <span>Cebu City</span>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>50,000+</h3>
+                        <p>Happy Patients</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>500+</h3>
+                        <p>Trusted Doctors</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>50+</h3>
+                        <p>Partner Hospitals</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>100,000+</h3>
+                        <p>Appointments Booked</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-badge">About Quick Med</span>
+                    <h2>Your Health, Our Priority</h2>
+                    <p>Quick Med is dedicated to making healthcare accessible to every Filipino. We connect patients with trusted doctors and hospitals across the Philippines, ensuring quality care is just a click away.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Verified healthcare professionals</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Real-time availability updates</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Secure and confidential platform</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>24/7 customer support</span>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Doctors</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Hospitals</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10,000+</h3>
+                            <p>Patients Served</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="about-badge">
+                        <i class="fas fa-award"></i>
+                        <span>Trusted Platform</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Get In Touch</span>
+                <h2>Have Questions? We're Here to Help</h2>
+                <p>Our dedicated support team is ready to assist you with any questions about our services or help you get started.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone Support</h4>
+                            <p>+63 2 8888-2020</p>
+                            <span>Available 24/7</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Support</h4>
+                            <p>info@quickmed.ph</p>
+                            <span>Response within 2 hours</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Office Address</h4>
+                            <p>Metropolitan Avenue, Makati City, Philippines</p>
+                            <span>Main Office</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                            <span>Weekend support available</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Full Name *</label>
+                                <input type="text" id="contactName" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address *</label>
+                                <input type="email" id="contactEmail" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactPhone">Phone Number</label>
+                                <input type="tel" id="contactPhone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject">Subject *</label>
+                                <select id="contactSubject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="booking">Booking Support</option>
+                                    <option value="technical">Technical Issue</option>
+                                    <option value="feedback">Feedback</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="message" rows="5" placeholder="Please describe your inquiry or concern..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Quick Med</h3>
+                    </div>
+                    <p>Your trusted partner in healthcare. Making quality medical care accessible to every Filipino through innovative technology and compassionate service.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#doctors">Find Doctors</a></li>
+                        <li><a href="#hospitals">Hospital Directory</a></li>
+                        <li><a href="#services">Appointment Booking</a></li>
+                        <li><a href="#">Health Records</a></li>
+                        <li><a href="#">Telemedicine</a></li>
+                        <li><a href="#">Health Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press & Media</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                        <li><a href="#">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Report Issue</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Data Protection</a></li>
+                        <li><a href="#">HIPAA Compliance</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Quick Med. All rights reserved. Better Care, Better Here.</p>
+                    <div class="footer-badges">
+                        <span class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            HIPAA Compliant
+                        </span>
+                        <span class="badge">
+                            <i class="fas fa-lock"></i>
+                            Secure Platform
+                        </span>
+                        <span class="badge">
+                            <i class="fas fa-certificate"></i>
+                            ISO Certified
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-sign-in-alt"></i>
+                </div>
+                <h2>Welcome Back!</h2>
+                <p>Please sign in to your Quick Med account to continue</p>
+            </div>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address *</label>
+                    <input type="email" id="loginEmail" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password *</label>
+                    <input type="password" id="loginPassword" required placeholder="Enter your password">
+                </div>
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Sign In
+                </button>
+            </form>
+            <div class="modal-footer">
+                <p>Don't have an account? <a href="#" onclick="switchModal('loginModal', 'signupModal')">Create Account</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h2>Join Quick Med</h2>
+                <p>Create your account and start your healthcare journey today</p>
+            </div>
+            <form id="signupForm" class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signupFirstName">First Name *</label>
+                        <input type="text" id="signupFirstName" required placeholder="Enter first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="signupLastName">Last Name *</label>
+                        <input type="text" id="signupLastName" required placeholder="Enter last name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email Address *</label>
+                    <input type="email" id="signupEmail" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="signupPhone">Phone Number *</label>
+                    <input type="tel" id="signupPhone" required placeholder="Enter phone number">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signupPassword">Password *</label>
+                        <input type="password" id="signupPassword" required placeholder="Create password">
+                    </div>
+                    <div class="form-group">
+                        <label for="signupConfirmPassword">Confirm Password *</label>
+                        <input type="password" id="signupConfirmPassword" required placeholder="Confirm password">
+                    </div>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox" required>
+                        <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+                    </label>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-user-plus"></i>
+                    Create Account
+                </button>
+            </form>
+            <div class="modal-footer">
+                <p>Already have an account? <a href="#" onclick="switchModal('signupModal', 'loginModal')">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Doctor Details Modal -->
+    <div id="doctorModal" class="modal">
+        <div class="modal-content large">
+            <span class="close" onclick="closeModal('doctorModal')">&times;</span>
+            <div id="doctorModalContent">
+                <!-- Doctor details will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
